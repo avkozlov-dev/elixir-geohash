@@ -173,7 +173,7 @@ defmodule Geohash do
     |> Enum.reduce(<<>>, fn c, acc -> <<acc::bitstring, c::bitstring>> end)
   end
 
-  defp bits_to_coordinates_pair(bits) do
+  def bits_to_coordinates_pair(bits) do
     bitslist = for <<bit::1 <- bits>>, do: bit
 
     lat =
