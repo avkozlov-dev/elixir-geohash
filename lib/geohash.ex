@@ -82,7 +82,7 @@ defmodule Geohash do
     <<geo_bits::size(bits_length)>>
   end
 
-  defp to_geobase32(bits) do
+  def to_geobase32(bits) do
     chars = for <<c::5 <- bits>>, do: elem(@geobase32, c)
     chars |> to_string
   end
